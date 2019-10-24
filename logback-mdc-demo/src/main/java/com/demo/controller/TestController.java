@@ -21,6 +21,7 @@ public class TestController {
         //模拟拦截中获取用户信息，并将用户名称写入MDC中
         try {
             MdcUtil.put("userName","chenyin");
+            //logback.xml的pattern中加入 %X{userName} 即可日志输出时带上userName
             //能够正常日志中输出 chenyin
             logger.info("父线程处理业务");
             //子线程输出日志中不带 chenyin （ch.qos.logback.classic.util.LogbackMDCAdapter基于ThreadLocal实现）
