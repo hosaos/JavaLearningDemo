@@ -18,6 +18,7 @@
     <modules>
         <module>logback-mdc-demo</module>
         <module>threadlocal-demo</module>
+        <module>dubbo-demo</module>
     </modules>
 
     <properties>
