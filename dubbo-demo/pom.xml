@@ -15,6 +15,8 @@
         <module>dubbo-demo-api</module>
         <module>dubbo-demo-provider</module>
         <module>dubbo-demo-consumer</module>
+        <module>java-spi-demo</module>
+        <module>dubbo-spi-demo</module>
     </modules>
 
     <dependencyManagement>

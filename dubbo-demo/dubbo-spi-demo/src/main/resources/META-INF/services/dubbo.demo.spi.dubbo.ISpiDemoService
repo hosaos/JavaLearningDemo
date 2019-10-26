@@ -1,0 +1,2 @@
+spiImpl1=dubbo.demo.spi.dubbo.JavaSpiImp1
+spiImpl2=dubbo.demo.spi.dubbo.JavaSpiImp2
