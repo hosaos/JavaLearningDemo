@@ -16,9 +16,13 @@
     <description>Demo project for Java</description>
     <packaging>pom</packaging>
     <modules>
+        <!--演示logback mdc的使用-->
         <module>logback-mdc-demo</module>
+        <!--演示threadLocal、inheritableThreadLocal、TransmittableThreadLocal的使用-->
         <module>threadlocal-demo</module>
+        <!--dubbo相关demo-->
         <module>dubbo-demo</module>
+        <module>aop-demo</module>
     </modules>
 
     <properties>
@@ -39,5 +43,4 @@
         </dependency>
 
     </dependencies>
-
 </project>

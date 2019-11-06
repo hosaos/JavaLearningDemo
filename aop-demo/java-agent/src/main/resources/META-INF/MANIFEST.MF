@@ -1,0 +1,5 @@
+Manifest-Version: 1.0
+Premain-Class: aop.demo.agent.JavaAgent
+Can-Redefine-Classes: true
+Class-Path: javassist-3.20.0-GA.jar
+Can-Retransform-Classes: true
