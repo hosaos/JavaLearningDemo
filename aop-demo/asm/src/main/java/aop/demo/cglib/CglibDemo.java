@@ -17,7 +17,8 @@ public class CglibDemo {
         enhancer.setCallback(methodInterceptor);
 
         AopDemoServiceWithoutInterface proxy = (AopDemoServiceWithoutInterface)enhancer.create();
-//        proxy.sayHello();
+        proxy.sayHello();
+        System.out.println("------------");
         proxy.sayHelloFinal();
     }
 }

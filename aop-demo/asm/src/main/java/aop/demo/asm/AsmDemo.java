@@ -17,7 +17,8 @@ import java.io.IOException;
  * @date: 2019-10-29 19:10
  */
 public class AsmDemo {
-    /*public static void main(String[] args) throws IOException {
+    public static void main(String[] args) throws IOException {
+        new AopDemoServiceWithoutInterface().sayHelloFinal();
         // TODO: 读取字节码
         ClassReader classReader = new ClassReader("aop/demo/service/AopDemoServiceWithoutInterface");
         ClassWriter classWriter = new ClassWriter(ClassWriter.COMPUTE_MAXS);
@@ -30,11 +31,8 @@ public class AsmDemo {
         FileOutputStream fout = new FileOutputStream(f);
         fout.write(data);
         fout.close();
-
-    }*/
-
-    public static void main(String[] args) {
         new AopDemoServiceWithoutInterface().sayHelloFinal();
 
     }
+
 }

@@ -19,6 +19,7 @@
             <groupId>com.chenyin</groupId>
             <artifactId>aop-service</artifactId>
         </dependency>
+        <!--systemPath需替换为自己机器的path-->
         <dependency>
             <groupId>com.sun</groupId>
             <artifactId>tools</artifactId>
@@ -28,32 +29,5 @@
         </dependency>
 
     </dependencies>
-
-    <!--<build>
-        <plugins>
-            <plugin>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-maven-plugin</artifactId>
-            </plugin>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-compiler-plugin</artifactId>
-                <version>2.3.1</version>
-                <configuration>
-                    <source>1.8</source>
-                    <target>1.8</target>
-                    <encoding>UTF-8</encoding>
-                    <compilerArguments>
-                        <bootclasspath>/Library/Java/JavaVirtualMachines/jdk1.8.0_181.jdk/Contents/Home/lib/tools.jar;/Library/Java/JavaVirtualMachines/jdk1.8.0_181.jdk/Contents/Home/jre/lib/rt.jar</bootclasspath>
-                    </compilerArguments>
-                    <compilerArgs>
-                        <arg>-XDignore.symbol.file</arg>
-                        <arg>-XDenableSunApiLintControl</arg>
-                    </compilerArgs>
-                    <fork>true</fork>
-                </configuration>
-            </plugin>
-        </plugins>
-    </build>-->
 
 </project>

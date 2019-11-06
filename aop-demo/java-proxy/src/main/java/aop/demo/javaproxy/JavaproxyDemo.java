@@ -13,11 +13,10 @@ import java.lang.reflect.Proxy;
 public class JavaproxyDemo {
 
     public static void main(String[] args) {
-        ClassLoader classLoader = Thread.currentThread().getContextClassLoader();
-        Class[] classes = new Class[]{AopDemoService.class};
         InvocationHandler handler = new DynamicHandler(new AopDemoServiceImpl());
 
-        AopDemoService proxyService = (AopDemoService) Proxy.newProxyInstance(classLoader, classes, handler);
+        AopDemoService proxyService = (AopDemoService) Proxy.newProxyInstance(AopDemoService.class.getClassLoader(),
+                AopDemoServiceImpl.class.getInterfaces(), handler);
         proxyService.sayHello();
     }
 
