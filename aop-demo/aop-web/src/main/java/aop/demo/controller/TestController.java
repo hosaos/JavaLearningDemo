@@ -35,6 +35,7 @@ public class TestController {
         }
         VirtualMachine vm = VirtualMachine.attach(pid);
         vm.loadAgent("/Users/chenyin/IdeaProjects/JavaLearningDemo/out/artifacts/attach_agent_jar/attach-agent.jar");
+        vm.detach();
         return "success";
     }
 

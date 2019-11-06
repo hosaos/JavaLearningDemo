@@ -25,7 +25,11 @@ public class MyClassTransformer implements ClassFileTransformer {
             CtMethod ctMethod = ctClass.getDeclaredMethod("sayHelloFinal");
             ctMethod.insertBefore("{ System.out.println(\"start\");}");
             ctMethod.insertAfter("{ System.out.println(\"end\"); }");
-            return ctClass.toBytecode();
+            byte[] bytes= ctClass.toBytecode();
+            if (ctClass.isFrozen()) {
+                ctClass.detach();
+            }
+            return bytes;
         } catch (Exception e) {
             e.printStackTrace();
         }
