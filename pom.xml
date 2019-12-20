@@ -23,6 +23,7 @@
         <!--dubbo相关demo-->
         <module>dubbo-demo</module>
         <module>aop-demo</module>
+        <module>forkjoinpool-demo</module>
     </modules>
 
     <properties>
