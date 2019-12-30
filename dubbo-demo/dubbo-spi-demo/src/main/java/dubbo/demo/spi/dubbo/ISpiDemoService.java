@@ -1,6 +1,6 @@
 package dubbo.demo.spi.dubbo;
 
-import com.alibaba.dubbo.common.extension.SPI;
+import org.apache.dubbo.common.extension.SPI;
 
 /**
  * @author: chenyin

@@ -8,7 +8,7 @@ import java.util.stream.LongStream;
  */
 public class Test {
     public static void main(String[] args) {
-        long[] array = LongStream.rangeClosed(1, 10000000).toArray();
+        long[] array = LongStream.rangeClosed(1, 100000000).toArray();
 //        new ForLoopDemo().sum(array);
         new SerialStreamDemo().sum(array);
 //        new CompletableFutureDemo().sum(array);

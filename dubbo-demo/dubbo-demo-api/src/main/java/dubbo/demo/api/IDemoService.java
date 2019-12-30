@@ -7,4 +7,9 @@ package dubbo.demo.api;
 public interface IDemoService {
     String sayHello();
 
+    //读取方法
+    String read(Long userId);
+    //写方法
+    String write(Long userId);
+
 }

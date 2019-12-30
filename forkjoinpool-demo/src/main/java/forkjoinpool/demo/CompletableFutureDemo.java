@@ -33,7 +33,7 @@ public class CompletableFutureDemo implements SumNumbers {
         //计算
         List<CompletableFuture<Long>> futureList =
                 splitList.stream().map(t -> CompletableFuture
-                        .supplyAsync(() -> sumList(t),threadPool)
+                        .supplyAsync(() -> sumList(t))
                 ).collect(Collectors.toList());
 
         Long result = futureList.stream().map(CompletableFuture::join).reduce(Long::sum).orElse(0L);
