@@ -6,15 +6,23 @@ import org.springframework.beans.factory.annotation.Value;
 
 import java.net.InetAddress;
 import java.net.UnknownHostException;
+import java.util.concurrent.atomic.AtomicInteger;
 
 /**
  * @author: chenyin
  * @date: 2019-10-24 16:03
  */
-@Service(version = "${dubbo.service.version}")
+@Service(version = "${dubbo.service.version}",timeout = 3000)
 public class DemoServiceImpl implements IDemoService {
+    static Integer count = 0;
     @Override
     public String sayHello() {
+        //
+        try {
+            Thread.sleep(2000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
         return getIp();
     }
 

@@ -7,25 +7,33 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
 
 
 /**
  * @author: chenyin
  * @date: 2019/12/20 下午2:39
  */
-@Controller
+@RestController
 @RequestMapping("test")
 public class TestController {
-    @Reference(loadbalance = RandomLoadBalance.NAME,version = "${dubbo.service.version}")
+    @Reference(loadbalance = RandomLoadBalance.NAME,version = "${dubbo.service.version}",timeout = 3000)
     private IDemoService demoService;
 
     @Value("${dubbo.service.version}")
     private String dubboVersion;
 
-    @GetMapping(value = "/sayHello")
-    public String sayHello() {
-        System.out.println(demoService.sayHello());
-        return "";
+    @GetMapping(value = "/flowRule")
+    public String flowRule() {
+        return "flowRule";
+    }
+    @GetMapping(value = "/degradeRule")
+    public String degradeRule() {
+        return "degradeRule";
+    }
+    @GetMapping(value = "/dubboTest")
+    public String dubboTest() {
+        return demoService.sayHello();
     }
     @GetMapping(value = "/read")
     public String read(Long userId) {
